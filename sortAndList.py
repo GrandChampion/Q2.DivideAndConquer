@@ -17,4 +17,4 @@ def sortAndCount(inputList:List[int])->tuple[List[int],int]:
         return (mergedList,totalInversion)
 
 
-print(sortAndCount([8,4,3,2,6,7,8,1]))
+# print(sortAndCount([8,4,3,2,6,7,8,1]))
