@@ -1,7 +1,8 @@
 from typing import List
 
-
-def mergeAndCount(sortedArr1:List[int],sortedArr2:List[int])->List[int]:
+# API
+# Return: merged list and # of inversion
+def mergeAndCount(sortedArr1:List[int],sortedArr2:List[int])->tuple[List[int],int]:
     len1 = len(sortedArr1)
     len2 = len(sortedArr2)
     inversionCnt = 0
@@ -22,9 +23,6 @@ def mergeAndCount(sortedArr1:List[int],sortedArr2:List[int])->List[int]:
     else:
         [outputArr.append(remaining) for remaining in sortedArr1[i:]]
     
-    return outputArr, inversionCnt
+    return outputArr,inversionCnt
 
-# sortedList,inversions = mergeAndCount([1,3,5,11],[2,4,6,7,8,9])
-
-# print(sortedList)
-# print(inversions)
+# print(mergeAndCount([1,3,5,11],[2,4,6,7,8,9]))
