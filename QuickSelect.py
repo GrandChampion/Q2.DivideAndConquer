@@ -1,13 +1,25 @@
+# Get the k th largest element from array
+
+# API
+# Input: k th element
+# Output: k th element
+def conquer(kthElement)->int:
+    return kthElement
+
+# API
+# Input: 1 list and rank
+# Output: k th largest element in the list
 def divide(L,k)->int:
     pivot = L[0]
-    Lesser = [i for i in L if i<L[0]]
-    Greater = [i for i in L if i>L[0]]
-
-    if len(Lesser) == k-1:
+    Lesser=[i for i in L if i < pivot]
+    Greater=[i for i in L if i>pivot]
+    if len(Greater)==k-1:
         return pivot
-    elif len(Lesser) > k-1:
-        return divide(Lesser,k)
+    elif len(Greater)>k-1:
+        KthElement = divide(Greater,k)
+        return conquer(KthElement)
     else:
-        return divide(Greater,k-(len(Lesser)+1))
-    
-print(divide([3,2,5,6,1,26],2))
+        KthElement = divide(Lesser,k-len(Greater)-1)
+        return conquer(KthElement)
+
+print(divide([2,4,6,8,1,2,5,3],3))
