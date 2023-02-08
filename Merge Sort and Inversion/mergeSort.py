@@ -22,7 +22,9 @@ def conquer(LeftArray,RightArray)->List[int]:
 
     return CombinedArray
 
-
+# API
+# Input: 
+# Output: 
 def divide(L:List[int])->List[int]:
     if len(L) == 1:
         return L
