@@ -4,7 +4,7 @@
 # Input: k th element
 # Output: k th element
 def conquer(kthElement)->int:
-    return kthElements
+    return kthElement
 
 # API
 # Input: 1 list and rank
